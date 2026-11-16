@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Korpa Zdravlja by D&amp;S – domaći proizvodi sa Romanije</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ee;--card:#fff;--ink:#2a2a22;--mute:#6b6a5c;--green:#1f4d2e;--green2:#2f6b42;--pink:#e98a8f;--pinkl:#fbe3e1;--gold:#f2b632;--line:#e8dfcf;--on-green:#fbf6ee;
+--hf:'Fraunces',Georgia,serif;--bf:'Nunito',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#16201a;--card:#1f2c24;--ink:#f1ece0;--mute:#b4b3a4;--green:#cfe8c8;--green2:#a9d3a0;--pinkl:#3a2a2c;--line:#31423a;--on-green:#16201a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#16201a;--card:#1f2c24;--ink:#f1ece0;--mute:#b4b3a4;--green:#cfe8c8;--green2:#a9d3a0;--pinkl:#3a2a2c;--line:#31423a;--on-green:#16201a}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--bf)}
+h1,h2,h3{font-family:var(--hf);line-height:1.15;margin:0;color:var(--green)}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.kilim{height:14px;background:
+linear-gradient(135deg,var(--pink) 25%,transparent 25%) -14px 0/28px 14px,
+linear-gradient(225deg,var(--pink) 25%,transparent 25%) -14px 0/28px 14px,
+linear-gradient(315deg,var(--gold) 25%,transparent 25%) 0 0/28px 14px,
+linear-gradient(45deg,var(--gold) 25%,transparent 25%) 0 0/28px 14px,var(--pinkl)}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.brand{font:800 1.15rem var(--hf);color:var(--green);text-decoration:none;margin-right:auto}
+nav a{text-decoration:none;font-weight:600;margin:0 8px;font-size:.95rem}
+nav a:hover{color:var(--green2)}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 22px;font:800 1rem var(--bf);cursor:pointer;text-decoration:none;background:var(--green);color:var(--on-green)}
+.btn.alt{background:transparent;color:var(--green);box-shadow:inset 0 0 0 2px var(--green)}
+.btn.sm{padding:8px 16px;font-size:.92rem}
+.cartbtn{position:relative}
+.cartbtn b{background:var(--pink);color:#2a1517;border-radius:99px;padding:0 8px;margin-left:6px;font-size:.85rem}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{padding:56px 0 48px;background:var(--pinkl)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800}
+.hero p{font-size:1.15rem;max-width:34ch;color:var(--ink)}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.crate{background:var(--green);border-radius:28px 28px 90px 28px;padding:28px;text-align:center;color:var(--on-green);transform:rotate(1.5deg)}
+.crate .em{font-size:3.2rem;letter-spacing:.1em;line-height:1.3}
+.crate strong{display:block;font:800 1.3rem var(--hf);margin-top:8px}
+.crate span{font-size:.92rem;opacity:.9}
+.facts{display:flex;gap:10px 22px;flex-wrap:wrap;padding:18px 0;font-weight:800;color:var(--green)}
+section{padding:56px 0}
+section h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px}
+.lead{color:var(--mute);margin:0 0 24px;max-width:60ch}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:7px 16px;font:700 .95rem var(--bf);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--green);color:var(--on-green);border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.ph{height:120px;display:grid;place-items:center;font-size:3.2rem;position:relative}
+.ph i{position:absolute;bottom:6px;right:10px;font:600 .68rem var(--bf);opacity:.6}
+.card .b{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{font-size:1.05rem}
+.card small{color:var(--mute);line-height:1.35}
+.row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px}
+.price{font-weight:800}
+.note{font-size:.88rem;color:var(--mute);margin-top:18px}
+.about{background:var(--green);color:var(--on-green)}
+.about h2{color:var(--on-green)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.about p{margin:0 0 14px}
+.steps{display:grid;gap:12px}
+.steps div{background:rgba(255,255,255,.1);border-radius:14px;padding:14px 16px}
+.steps b{display:block;font-family:var(--hf);font-size:1.1rem}
+:root[data-theme="dark"] .about,:root:not([data-theme="light"]) .about{}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .about{background:#223a2a;color:#f1ece0}:root:not([data-theme="light"]) .about h2{color:#f1ece0}}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.rev blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.rev blockquote p{margin:0 0 12px}
+.rev cite{font-style:normal;font-weight:800;color:var(--green)}
+.stars{color:var(--gold);letter-spacing:2px}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.box p{margin:0 0 10px}
+footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.9rem}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;opacity:0;pointer-events:none;transition:opacity .2s}
+#ov.on{opacity:1;pointer-events:auto}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);z-index:31;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(18px + env(safe-area-inset-bottom,0px));overflow-y:auto}
+#dr.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.li{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.li span:first-child{flex:1}
+.q{display:flex;align-items:center;gap:8px}
+.q button{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--ink);font-weight:800;cursor:pointer}
+form{display:grid;gap:10px;margin-top:14px}
+label{font-weight:700;font-size:.92rem;display:grid;gap:4px}
+input,textarea{font:inherit;padding:10px 12px;border:2px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin-top:12px}
+.ok{background:var(--pinkl);border-radius:16px;padding:18px;margin-top:14px}
+.err{color:#b3261e;font-size:.88rem;min-height:1.2em}
+.empty{color:var(--mute);padding:20px 0}
+@media (max-width:760px){nav{display:none}.hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}.crate{transform:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="kilim" aria-hidden="true"></div>
+<header><div class="wrap">
+<a class="brand" href="#top">Korpa Zdravlja <small style="font-weight:600">by D&amp;S</small></a>
+<nav><a href="#o-nama">O nama</a><a href="#ponuda">Ponuda</a><a href="#utisci">Utisci</a><a href="#kontakt">Kontakt</a></nav>
+<button class="btn sm cartbtn" id="open" aria-label="Otvori korpu">Korpa<b id="cnt">0</b></button>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Zdrava ishrana za zdrav život</h1>
+<p>Domaći proizvodi sa Romanije i iz zlatne doline Kiseljaka. Povrće, zimnica, sokovi i slatko iz domaće ruke, do vaših vrata za 24 do 48 sati.</p>
+<div class="cta"><a class="btn" href="#ponuda">Pogledaj ponudu</a><a class="btn alt" href="tel:+38762106082">Pozovi 062/106-082</a></div>
+</div>
+<div class="crate" aria-hidden="true"><div class="em">🍆🥔🥕<br>🧅🍅🍠</div><strong>100% organski</strong><span>Isporuka online, 24/48 sati</span></div>
+</div></div>
+<div class="wrap facts"><span>🌱 100% organski</span><span>🏔️ Sa Romanije i iz Kiseljaka</span><span>🚚 Isporuka 24/48h</span><span>🏠 Domaća proizvodnja</span></div>
+
+<section class="about" id="o-nama"><div class="wrap">
+<div>
+<h2>Od naše bašte do vašeg stola</h2>
+<p>Korpa Zdravlja je mala porodična priča iz Bosne. Povrće rastemo na Romaniji i u zlatnoj dolini Kiseljaka, a zimnicu, sokove i slatko pripremamo kod kuće, onako kako se oduvijek radilo.</p>
+<p>Bez prečica i bez vještačkih dodataka. Samo ono što daje zemlja, malo vremena i puno pažnje.</p>
+</div>
+<div class="steps">
+<div><b>1. Izaberete</b>Dodate proizvode u korpu na sajtu.</div>
+<div><b>2. Mi pripremimo</b>Svježe ubrano ili domaće spremljeno.</div>
+<div><b>3. Stiže na vrata</b>Isporuka u roku od 24 do 48 sati.</div>
+</div>
+</div></section>
+
+<section id="ponuda"><div class="wrap">
+<h2>Naša ponuda</h2>
+<p class="lead">Izaberite šta vam treba, dodajte u korpu i pošaljite narudžbu. Javimo vam se da potvrdimo dostavu.</p>
+<div class="chips" id="chips" role="group" aria-label="Kategorije"></div>
+<div class="grid" id="grid"></div>
+<p class="note">Cijene i fotografije su privremene i služe samo za demonstraciju.</p>
+</div></section>
+
+<section id="utisci"><div class="wrap">
+<h2>Šta kažu naši kupci</h2>
+<p class="lead">Primjeri utisaka za demonstraciju, bit će zamijenjeni pravim.</p>
+<div class="rev">
+<blockquote><div class="stars" aria-label="5 zvjezdica">★★★★★</div><p>Krompir i cvekla kao nekad kod bake. Poručila sam u ponedjeljak, u srijedu je već bilo na kućnom pragu.</p><cite>Amra, Sarajevo</cite></blockquote>
+<blockquote><div class="stars" aria-label="5 zvjezdica">★★★★★</div><p>Zimska gajbica je savršen poklon. Pekmez i slatko od dunja su nestali za dva dana.</p><cite>Dario, Zenica</cite></blockquote>
+<blockquote><div class="stars" aria-label="5 zvjezdica">★★★★★</div><p>Kašasti sok od mrkve i jabuke piju i djeca. Turšija je baš kao domaća, jer jeste domaća.</p><cite>Selma, Tuzla</cite></blockquote>
+</div>
+</div></section>
+
+<section class="contact" id="kontakt"><div class="wrap">
+<div class="box"><h2>Javite nam se</h2>
+<p>📞 <a href="tel:+38762106082"><b>062/106-082</b></a></p>
+<p>📷 Instagram: <a href="https://www.instagram.com/korpazdravljads/" rel="noopener">@korpazdravljads</a></p>
+<p>🚚 Online prodaja, isporuka u roku od 24 do 48 sati.</p>
+<p>🏔️ Romanija i zlatna dolina Kiseljaka.</p></div>
+<div class="box"><h2>Narudžba je laka</h2><p>Dodajte proizvode u korpu, upišite ime, telefon i adresu. Mi vas pozovemo da potvrdimo narudžbu i vrijeme dostave. Plaćanje pri preuzimanju.</p><button class="btn" id="open2">Otvori korpu</button></div>
+</div></section>
+</main>
+<footer><div class="wrap">Korpa Zdravlja by D&amp;S · Demo verzija sajta</div></footer>
+<div class="kilim" aria-hidden="true"></div>
+
+<div id="ov"></div>
+<aside id="dr" aria-label="Korpa" aria-hidden="true">
+<div class="dh"><h2 style="font-size:1.5rem">Vaša korpa</h2><button class="btn alt sm" id="close">Zatvori</button></div>
+<div id="items"></div>
+<div id="checkout">
+<div class="tot"><span>Ukupno</span><span id="tot">0,00 KM</span></div>
+<form id="f" novalidate>
+<label>Ime i prezime<input id="n" autocomplete="name"></label>
+<label>Telefon<input id="p" type="tel" autocomplete="tel" placeholder="06x/xxx-xxx"></label>
+<label>Adresa za dostavu<input id="a" autocomplete="street-address"></label>
+<label>Napomena (nije obavezno)<textarea id="m" rows="2"></textarea></label>
+<div class="err" id="err" role="alert"></div>
+<button class="btn" type="submit">Pošalji narudžbu</button>
+</form>
+</div>
+<div id="done"></div>
+</aside>
+
+<script>
+const P=[
+["Povrće","🥔","Krompir","Romanijski, žuta agria",1.8,"kg"],["Povrće","🍠","Batat","Slatki krompir",4.5,"kg"],["Povrće","🧅","Crveni luk","",2.2,"kg"],["Povrće","🧄","Bijeli luk","",9,"kg"],["Povrće","🫜","Cvekla","",2.5,"kg"],["Povrće","🥕","Mrkva","",2,"kg"],["Povrće","🥬","Kupus","",1.5,"kg"],["Povrće","🫚","Crna rotkva","",3,"kg"],["Povrće","🥦","Okrugla repa","",2,"kg"],["Povrće","🌿","List peršuna","",2,"svežanj"],["Povrće","🌱","Kopar","",1.5,"svežanj"],["Povrće","🍲","Miks povrće za supu","",3,"pak."],
+["Zimnica","🥗","Šarena salata","",7,"tegla"],["Zimnica","🫜","Salata od cvekle","",6,"tegla"],["Zimnica","🫑","Paradajz paprika","",7,"tegla"],["Zimnica","🥒","Turšija","",6,"tegla"],["Zimnica","🥬","Kiseli kupus","",5,"kg"],["Zimnica","🧅","Kiseli luk","",6,"tegla"],["Zimnica","🍅","Sušeni šeri paradajz","Bijeli luk, ekstra djevičansko ulje, morska so",12,"tegla"],["Zimnica","🌿","Pasta od peršuna","Bijeli luk u ekstra djevičanskom ulju",8,"tegla"],["Zimnica","🥕","Povrtna kocka","Mrkva, korijen i list peršuna",6,"tegla"],["Zimnica","🎃","Slatko od tikve","Med, tahin, orah ili badem",9,"tegla"],["Zimnica","🥕","Slatko od mrkve","Puter, orah",9,"tegla"],
+["Sokovi i slatko","🥤","Kašasti sok","Mrkva, jabuka i tikva",4,"0,75 l"],["Sokovi i slatko","🍇","Sirup od grožđa","",8,"boca"],["Sokovi i slatko","🧃","Sok cvekla, mrkva i jabuka","",4,"0,75 l"],["Sokovi i slatko","🌹","Pekmez od šipurka","",8,"tegla"],["Sokovi i slatko","🍐","Slatko od dunja","",8,"tegla"],
+["Ostalo","🌾","Integralno brašno","",3.5,"kg"],["Ostalo","🌽","Kukuruzno brašno","",3,"kg"],["Ostalo","🥧","Kukuruza","Domaće brašno, jaja, sir",8,"kom"],["Ostalo","🧁","Mafini od kukuruze","",2,"kom"],["Ostalo","🎁","Poklon zimska gajbica","Kašasti sok, pekmez, slatko od dunja, suha smokva, mješavina zimskog čaja. Po želji šolja za čaj, orašasti plodovi i domaći kolač.",39,"gajbica"],["Ostalo","🍫","Čokoladni mafin","",2.5,"kom"]];
+const col={"Povrće":"#d9efd0","Zimnica":"#fbe3e1","Sokovi i slatko":"#fcebc2","Ostalo":"#e6dccb"};
+const cats=["Sve",...new Set(P.map(p=>p[0]))];let cat="Sve",cart={};
+const $=s=>document.querySelector(s),fm=n=>n.toFixed(2).replace(".",",")+" KM";
+function chips(){$("#chips").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c==cat}" data-c="${c}">${c}</button>`).join("")}
+function grid(){$("#grid").innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>cat=="Sve"||p[0]==cat).map(([p,i])=>`<article class="card"><div class="ph" style="background:${col[p[0]]}" aria-hidden="true">${p[1]}<i>fotografija uskoro</i></div><div class="b"><h3>${p[2]}</h3><small>${p[3]}</small><div class="row"><span class="price" style="color:#2a2a22">${fm(p[4])}<small style="font-weight:400"> / ${p[5]}</small></span>${cart[i]?`<span class="q"><button data-m="${i}" aria-label="Manje ${p[2]}">−</button><b>${cart[i]}</b><button data-p="${i}" aria-label="Više ${p[2]}">+</button></span>`:`<button class="btn sm" data-add="${i}" aria-label="Dodaj ${p[2]} u korpu">Dodaj</button>`}</div></div></article>`).join("")}
+function render(){
+const ids=Object.keys(cart);let t=0,c=0;
+$("#items").innerHTML=ids.length?ids.map(i=>{const p=P[i],q=cart[i];t+=p[4]*q;c+=q;return`<div class="li"><span>${p[1]} ${p[2]}<br><small>${fm(p[4])} / ${p[5]}</small></span><span class="q"><button data-m="${i}" aria-label="Manje">−</button><b>${q}</b><button data-p="${i}" aria-label="Više">+</button></span></div>`}).join(""):'<p class="empty">Korpa je prazna. Dodajte nešto iz ponude.</p>';
+$("#tot").textContent=fm(t);$("#cnt").textContent=c;$("#checkout").hidden=!ids.length;grid();
+}
+function drawer(on){$("#dr").classList.toggle("on",on);$("#ov").classList.toggle("on",on);$("#dr").setAttribute("aria-hidden",!on);if(on&&!$("#done").innerHTML)$("#done").innerHTML=""}
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
+if(t.dataset.c){cat=t.dataset.c;chips();grid()}
+const foc=i=>(document.querySelector('#grid [data-p="'+i+'"]')||document.querySelector('#grid [data-add="'+i+'"]'))?.focus();
+if(t.dataset.add){const i=t.dataset.add;cart[i]=(cart[i]||0)+1;render();foc(i)}
+if(t.dataset.p){const g=t.closest("#grid");cart[t.dataset.p]++;render();if(g)foc(t.dataset.p)}
+if(t.dataset.m){const g=t.closest("#grid"),i=t.dataset.m;if(--cart[i]<=0)delete cart[i];render();if(g)foc(i)}
+if(t.id=="open"||t.id=="open2"){$("#done").innerHTML="";$("#items").hidden=false;render();drawer(true)}
+if(t.id=="close")drawer(false)});
+$("#ov").onclick=()=>drawer(false);
+document.addEventListener("keydown",e=>{if(e.key=="Escape")drawer(false)});
+$("#f").onsubmit=e=>{e.preventDefault();
+const n=$("#n").value.trim(),p=$("#p").value.trim(),a=$("#a").value.trim();
+if(!n||p.replace(/\D/g,"").length<8||!a){$("#err").textContent="Upišite ime, ispravan broj telefona i adresu dostave.";return}
+$("#err").textContent="";
+let t=0,lines=Object.keys(cart).map(i=>{t+=P[i][4]*cart[i];return`${cart[i]} x ${P[i][2]} (${P[i][5]})`});
+const msg=`Narudžba za Korpa Zdravlja\n${lines.join("\n")}\nUkupno: ${fm(t)}\nIme: ${n}\nTelefon: ${p}\nAdresa: ${a}\nNapomena: ${$("#m").value.trim()||"-"}`;
+$("#items").hidden=true;$("#checkout").hidden=true;
+$("#done").innerHTML=`<div class="ok"><h3>Hvala, ${n.split(" ")[0].replace(/[<>&]/g,"")}!</h3><p>Narudžba je primljena. Javit ćemo se na ${p.replace(/[<>&]/g,"")} da potvrdimo dostavu u roku od 24 do 48 sati.</p><p><small>Ovo je demo: u pravoj verziji narudžba stiže vlasnicima na telefon ili mejl.</small></p><p><a class="btn sm" href="https://wa.me/38762106082?text=${encodeURIComponent(msg)}" rel="noopener">Pošalji i na WhatsApp</a></p></div>`;
+cart={};render();$("#checkout").hidden=true;$("#f").reset()};
+chips();grid();render();
+</script>
+</body>
+</html>
